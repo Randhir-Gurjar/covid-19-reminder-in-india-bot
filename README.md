@@ -23,3 +23,34 @@ as the name sugests
   - What if script fails? What if the Govt website changes format?
   - You get Slack notifications about the exceptions too.
   - You have log files (check `bot.log`) too, to evaluate what went wrong
+
+
+
+
+
+## Installation
+- You need Python
+- You need a Slack account + Slack Webhook to send slack notifications to your account
+- Install dependencies by running
+```bash
+pip install tabulate
+pip install requests
+pip install beautifulsoup4
+```
+- Clone this repo and create auth.py
+```bash
+git clone https://github.com/rachitiitr/coronovirus-bot-tracker.git
+cd coronovirus-bot-tracker
+touch auth.py
+```
+- Write your Slack Webhook into auth.py
+```python
+DEFAULT_SLACK_WEBHOOK = 'https://hooks.slack.com/services/<your custome webhook url>'
+```
+- Setup the cron job to receive updates whenever something changes
+```bash
+crontab -e # opens an editor like vim or nano
+# now write the following to run the bot every 5 mins
+*/5 * * * * cd $PATH_TO_CLONE_DIR; python3 corona_bot.py --states 'haryana,maharashtra'
+# to receive updates for all states, ignore the --states flag
+```
