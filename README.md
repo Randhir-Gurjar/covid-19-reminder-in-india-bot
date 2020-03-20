@@ -51,6 +51,6 @@ DEFAULT_SLACK_WEBHOOK = 'https://hooks.slack.com/services/<your custome webhook 
 ```bash
 crontab -e # opens an editor like vim or nano
 # now write the following to run the bot every 5 mins
-*/5 * * * * cd $PATH_TO_CLONE_DIR; python3 corona_bot.py --states 'haryana,maharashtra'
+*/10 * * * * cd $PATH_TO_CLONE_DIR; python3 corona_bot.py --states 'up,bihar,maharashtra'
 # to receive updates for all states, ignore the --states flag
 ```
