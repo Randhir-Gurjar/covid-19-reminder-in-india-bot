@@ -37,12 +37,12 @@ pip install tabulate
 pip install requests
 pip install beautifulsoup4
 ```
-- Clone this repo and create a
-```bash
 
 
 
-```
+
+
+
 - Write your Slack Webhook into auth.py
 ```python
 DEFAULT_SLACK_WEBHOOK = 'https://hooks.slack.com/services/<your custome webhook url>'
