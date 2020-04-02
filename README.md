@@ -37,11 +37,11 @@ pip install tabulate
 pip install requests
 pip install beautifulsoup4
 ```
-- Clone this repo and create auth.py
+- Clone this repo and create a
 ```bash
-git clone https://github.com/rachitiitr/coronovirus-bot-tracker.git
-cd coronovirus-bot-tracker
-touch auth.py
+
+
+
 ```
 - Write your Slack Webhook into auth.py
 ```python
